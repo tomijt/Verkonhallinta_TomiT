@@ -87,9 +87,8 @@ Myös yhteys branch-client-laitteeseen osoitteessa 10.10.30.101 onnistui ilman p
 
 `traceroute`-komennolla tutkittiin reittiä branch-clientille. Reitiksi saatiin:
 
-```text
 client1 → r1 → r2 → r3 → branch-client
-```
+
 
 Ensimmäinen hyppy oli 10.10.10.1, toinen 10.255.12.2 ja kolmas 10.255.23.2. Viimeinen osoite oli branch-clientin 10.10.30.101. Tuloksen perusteella liikenne kulkee siis r1:n, r2:n ja r3:n kautta ennen kuin se saavuttaa branch-clientin.
 
