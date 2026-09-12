@@ -69,19 +69,19 @@ Reititystä tutkittiin client1-laitteella komennoilla `ip addr`, `ip route`, `pi
 
 ### Yhteystestit
 
-#### Yhteys web1-palvelimeen
+#### Yhteys web1-palvelimeen - ping -c 4 10.10.20.101
 
 ![Ping web1](images/ping-web1.png)
 
 Yhteyttä testattiin web1-palvelimeen osoitteessa 10.10.20.101. Ping onnistui kaikilla neljällä paketilla eikä pakettihäviötä ollut.
 
-#### Yhteys branch-clientiin
+#### Yhteys branch-clientiin - ping -c 4 10.10.30.101
 
 ![Ping branch-client](images/ping-branch-client.png)
 
 Myös yhteys branch-client-laitteeseen osoitteessa 10.10.30.101 onnistui ilman pakettihäviöitä.
 
-### Traceroute
+### Traceroute - 10.10.30.101
 
 ![Traceroute](images/traceroute.png)
 
