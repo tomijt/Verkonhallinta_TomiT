@@ -1,8 +1,11 @@
 # 1. Johdanto (Mikä on SNMP)
 
-SNMP eli Simple Network Management Protocol on verkkolaitteiden valvontaan ja hallintaan tarkoitettu protokolla. Sen avulla voidaan kerätä tietoa verkossa olevista laitteista ilman, että jokaiseen laitteeseen tarvitsee kirjautua erikseen.
+SNMP eli Simple Network Management Protocol on verkkolaitteiden valvontaan ja hallintaan tarkoitettu protokolla. Sen avulla voidaan kerätä tietoa verkossa olevista laitteista keskitetysti ilman, että jokaiseen laitteeseen tarvitsee kirjautua erikseen. Näin verkon toimintaa on helpompi seurata ja mahdollisia ongelmia havaita.
 
-SNMP:n avulla voidaan tarkastella esimerkiksi laitteen nimeä, käyttöjärjestelmää, uptimea, verkkorajapintoja sekä niiden tilaa. Tässä harjoituksessa SNMP:tä käytettiin web1-, db1- ja branch-client-laitteiden valvontaan.
+SNMP toiminta perustuu manageriin ja valvottavilla laitteilla toimiviin agentteihin. Manageri lähettää kyselyitä, joihin agentit vastaavat palauttamalla pyydetyt tiedot. Tietoja haetaan OID-tunnisteilla, jotka kertovat, mitä tietoa laitteelta halutaan selvittää. Näitä tietoja ovat esimerkiksi laitteen nimi, käyttöjärjestelmän kuvaus, SNMP-agentin käyttöaika ja verkkorajapintojen tila.
+
+Tässä harjoituksessa ansible-kontti toimi SNMP-managerina, josta tehtiin kyselyitä web1-, db1- ja branch-client-laitteille. Harjoituksen tavoitteena oli tutustua SNMP toimintaan, asentaa agentit valvottaville laitteille ja kerätä niiltä tietoja SNMP-kyselyiden avulla.
+
 
 # 2. Asennus (Miten SNMP-agentti asennettiin)
 
