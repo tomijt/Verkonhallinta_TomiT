@@ -1,16 +1,16 @@
 [week01 (1).md](https://github.com/user-attachments/files/32145525/week01.1.md)
 
-## 1. Johdanto
+# 1. Johdanto
 
 Tässä dokumentaatiossa kuvataan Verkonhallinta-harjoitusympäristön verkkotopologiaa ja sen rakennetta. Työssä kartoitetaan ympäristön laitteet, niiden väliset yhteydet sekä käytössä olevat IP-verkot ja osoitteet.
 
 Lisäksi tutkitaan reititystä client1-laitteelta muihin verkkoihin. Tarkoituksena on muodostaa selkeä kokonaiskuva verkosta, jota voidaan hyödyntää myöhemmissä harjoituksissa.
 
-## 2. Verkkokaavio
+# 2. Verkkokaavio
 
 ![Verkkokaavio](images/topology.png)
 
-## 3. Laiteluettelo
+# 3. Laiteluettelo
 
 | Laite | Tarkoitus |
 |---|---|
@@ -28,7 +28,7 @@ Lisäksi tutkitaan reititystä client1-laitteelta muihin verkkoihin. Tarkoitukse
 | zabbix | Verkon ja palvelimien valvontajärjestelmä, joka seuraa laitteiden ja palveluiden toimintaa ja voi ilmoittaa havaituista ongelmista. |
 
 
-## 4. IP-suunnitelma
+# 4. IP-suunnitelma
 
 | Verkko | Tarkoitus | Yhdyskäytävä |
 |---|---|---|
@@ -39,7 +39,7 @@ Lisäksi tutkitaan reititystä client1-laitteelta muihin verkkoihin. Tarkoitukse
 | 10.255.12.0/30 | r1:n ja r2:n välinen reitittimien yhteys. | 10.255.12.1 (reititin r1) / 10.255.12.2 (reititin r2) |
 | 10.255.23.0/30 | r2:n ja r3:n välinen reitittimien yhteys. | 10.255.23.1 (reititin r2) / 10.255.23.2 (reititin r3) |
 
-### Mitä laitteita kuhunkin verkkoon kuuluu?
+## Mitä laitteita kuhunkin verkkoon kuuluu?
 
 - **User LAN – 10.10.10.0/24:** client1, attacker, reititin r1
 - **Server LAN – 10.10.20.0/24:** web1, db1, reititin r2
@@ -47,17 +47,17 @@ Lisäksi tutkitaan reititystä client1-laitteelta muihin verkkoihin. Tarkoitukse
 - **Management LAN – 10.10.99.0/24:** ansible, grafana, prometheus, zabbix, syslog, cadvisor, reititin r2
 - **10.255.12.0/30:** reititin r1, reititin r2
 - **10.255.23.0/30:** reititin r2, reititin r3
-- 
 
-## 5. Reitityksen analyysi
+
+# 5. Reitityksen analyysi
 
 client1:llä ajetut komennot:
 
-### `ip addr`
+## `ip addr`
 
 ![ip addr](images/ip-addr.png)
 
-### `ip route`
+## `ip route`
 
 ![ip route](images/ip-route.png)
 
@@ -67,21 +67,21 @@ Reititystä tutkittiin client1-laitteella komennoilla `ip addr`, `ip route`, `pi
 
 `ip route` -komennon perusteella oletusyhdyskäytävänä toimii 10.10.10.1, joka on r1-reitittimen osoite käyttäjäverkossa. Muuhun kuin paikalliseen 10.10.10.0/24-verkkoon menevä liikenne kulkee tämän yhdyskäytävän kautta.
 
-### Yhteystestit
+## Yhteystestit
 
-#### Yhteys web1-palvelimeen - ping -c 4 10.10.20.101
+### Yhteys web1-palvelimeen - ping -c 4 10.10.20.101
 
 ![Ping web1](images/ping-web1.png)
 
 Yhteyttä testattiin web1-palvelimeen osoitteessa 10.10.20.101. Ping onnistui kaikilla neljällä paketilla eikä pakettihäviötä ollut.
 
-#### Yhteys branch-clientiin - ping -c 4 10.10.30.101
+### Yhteys branch-clientiin - ping -c 4 10.10.30.101
 
 ![Ping branch-client](images/ping-branch-client.png)
 
 Myös yhteys branch-client-laitteeseen osoitteessa 10.10.30.101 onnistui ilman pakettihäviöitä.
 
-### Traceroute - 10.10.30.101
+## Traceroute - 10.10.30.101
 
 ![Traceroute](images/traceroute.png)
 
@@ -93,7 +93,7 @@ client1 → r1 → r2 → r3 → branch-client
 Ensimmäinen hyppy oli 10.10.10.1, toinen 10.255.12.2 ja kolmas 10.255.23.2. Viimeinen osoite oli branch-clientin 10.10.30.101. Tuloksen perusteella liikenne kulkee siis r1:n, r2:n ja r3:n kautta ennen kuin se saavuttaa branch-clientin.
 
 
-## 6. Yhteenveto
+# 6. Yhteenveto
 
 Työssä selvitettiin harjoitusympäristön verkkotopologia, laitteet, IP-osoitteet ja reititys. Verkon rakenne koostuu käyttäjäverkosta, palvelinverkosta, hallintaverkosta sekä haarakonttorin verkosta. Reitittimet r1, r2 ja r3 yhdistävät verkot toisiinsa.
 
@@ -107,4 +107,4 @@ Lisäksi käynnissä ollut ympäristö oli eri tilassa kuin käytössä oleva to
 
 Dokumentointi auttaa IT-asiantuntijaa hahmottamaan verkon kokonaisuuden ja löytämään mahdollisia vikoja nopeammin ilman, että kaikkia asetuksia tarvitsee selvittää alusta asti.
 
-Tehtävissä tuli käytettyä tekoälyn avustusta.
+Tehtävissä tuli käytettyä tekoälyn avustusta, mm. oikeiden komentojen löytämisessä.
