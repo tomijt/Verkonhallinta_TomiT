@@ -11,6 +11,7 @@ Tässä harjoituksessa ansible-kontti toimi SNMP-managerina, josta tehtiin kysel
 
 SNMP-agentti asennettiin valvottaville laitteille web1, db1 ja branch-client Linuxin paketinhallinnan avulla. Jokaiselle laitteelle asennettiin snmpd-paketti, jonka jälkeen agentin asetuksia muokattiin niin, että se pystyi vastaanottamaan SNMP-kyselyitä verkon kautta UDP-portissa 161. Lopuksi SNMP-palvelu käynnistettiin uudelleen, jotta tehdyt asetukset tulivat voimaan.
 
+
 # 3. Kerätyt tiedot (Kuvaukset ja tulosteet)
 
 ## 3.1 ansible -> web1 yhteystesti
