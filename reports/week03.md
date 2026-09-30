@@ -6,7 +6,7 @@ Monitorointi tarkoittaa palveluiden, laitteiden ja verkkojen toiminnan jatkuvaa 
 
 Prometheus on monitorointijärjestelmä, joka kerää säännöllisesti mittaustietoja valvottavista kohteista ja tallentaa ne aikasarjoina. Tässä harjoituksessa web1-palvelimen Node Exporter tarjoaa Prometheukselle tietoja esimerkiksi CPU:n toiminnasta, muistinkäytöstä, levytilasta ja verkkoliikenteestä. Grafanan avulla kerätyt tiedot esitetään dashboardin kuvaajina.
 
-Harjoituksen tavoitteena on ottaa käyttöön palvelimen monitorointi, luoda Grafanaan dashboard ja tarkastella kuormituksen vaikutuksia mittareihin. Lisäksi vertailen Prometheusta SNMP:tä ja pohdin monitoroinnin hyötyjä ylläpidossa ja vianetsinnässä.
+Harjoituksen tavoitteena on ottaa käyttöön palvelimen monitorointi, luoda Grafanaan dashboard ja tarkastella kuormituksen vaikutuksia mittareihin. Lisäksi vertailen Prometheusta ja SNMP:tä ja pohdin monitoroinnin hyötyjä ylläpidossa ja vianetsinnässä.
 
 ## 2. Node Exporterin käyttöönotto
 
@@ -71,6 +71,10 @@ Kuormitukset, aloitettu aikajanalla 17:35:
 
 ![kuormitustesti levy verkko](images/week03-kuormitustesti-levy-verkko.png)
 
+Kuormituksessa käytetyt komennot: 
+- Levykuormitus = dd if=/dev/zero of=testfile.img bs=1M count=500
+- CPU-kuormitus = yes > /dev/null sekä stress-ng --cpu 4 --timeout 60s
+
 Havainnot kuormituksista:
 
 - CPU-käyrä: Käyrä nousi kuormituksen aikana hetkellisesti ja laski sen päätyttyä takaisin lähtötasolle.
@@ -90,7 +94,7 @@ SNMP ja Prometheus soveltuvat molemmat monitorointiin, mutta niiden toimintatava
 | Mittarien määrä | Riippuu laitteen tarjoamista MIB-tiedoista. | Riippuu exporterista. Node Exporter tarjoaa paljon palvelimen mittareita. |
 | Visualisointi | Kuvaajat vaativat erillisen valvontaohjelman. | Mittareita voi tarkastella Prometheuksessa ja visualisoida Grafanassa. |
 | Hälytysmahdollisuudet | Trap-ilmoitukset ja valvontaohjelman hälytykset. | Hälytyssäännöt ja ilmoitusten välitys Alertmanagerilla. |
-| Soveltuvuus pilviympäristöihin | Sopii erityisesti verkkolaitteiden valvontaan. | Sopii hyvin pilvipalveluiden ja konttiympäristöjen valvontaan. |
+| Soveltuvuus pilviympäristöihin | Soveltuu pilviympäristön SNMP:tä tukevien laitteiden ja palvelimien valvontaan, mutta nopeasti muuttuvien konttiympäristöjen seuranta vaatii enemmän sovittamista. | Sopii hyvin pilvi- ja konttiympäristöihin. Palveluiden automaattinen löytäminen helpottaa muuttuvien valvontakohteiden seurantaa. |
 
 Vertailun perusteella SNMP sopii erityisesti reitittimien ja kytkimien valvontaan. Prometheuksen etuna on mittaustietojen tallentaminen aikasarjoina, jolloin muutoksia voidaan tarkastella pidemmältä ajalta. PromQL-kyselyillä tietoja voidaan käsitellä ja vertailla. SNMP:n avulla kerättyjen tietojen historiatallennukseen ja esittämiseen tarvitaan erillinen valvontajärjestelmä.
 
