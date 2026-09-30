@@ -1,4 +1,4 @@
-# Viikko 3 – Prometheus ja Grafana
+# Viikko 3 – Prometheus, Node Exporter ja Grafana
 
 ## 1. Johdanto
 
