@@ -1,0 +1,22 @@
+---
+-  name:
+   hosts: routers
+   gather_facts: false
+
+   tasks:
+    - name:
+      cisco.ios.ios_facts:
+        gather_subset:
+         - all
+        gather_network_resources:
+         - interfaces
+
+    - name:
+      ansible.builtin.debug:
+        msg:
+          - "Hostname: {{ ansible_net_hostname }}"
+          - "IOS-versio: {{ ansible_net_version }}"
+          - "Sarjanumero: {{ ansible_net_serialnum }}"
+          - "Interfacet: {{ ansible_net_interfaces.keys() | list }}"
+
+
