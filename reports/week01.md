@@ -1,5 +1,3 @@
-[week01 (1).md](https://github.com/user-attachments/files/32145525/week01.1.md)
-
 # 1. Johdanto
 
 Tässä dokumentaatiossa kuvataan Verkonhallinta-harjoitusympäristön verkkotopologiaa ja sen rakennetta. Työssä kartoitetaan ympäristön laitteet, niiden väliset yhteydet sekä käytössä olevat IP-verkot ja osoitteet.
