@@ -50,6 +50,21 @@ Dashboard:
 
 ![grafana dashboard](images/week03-grafana-dashboard.png)
 
+Käytetyt PromQL-kyselyt:
+
+- CPU = 100 - (avg by(instance)
+(rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)
+
+- Muisti =(node_memory_MemTotal_bytes -
+ node_memory_MemAvailable_bytes) / node_memory_MemTotal_bytes * 100
+
+- Levytila = 100 - ( node_filesystem_avail_bytes / node_filesystem_size_bytes * 100 )
+
+- Verkkoliikenne (saapuva) = rate(node_network_receive_bytes_total[5m])
+  
+- Verkkoliikenne (lähtevä) = rate(node_network_transmit_bytes_total[5m])
+  
+
 ## 5. Kuormitustesti
 
 Kuormitukset, aloitettu aikajanalla 17:35:
