@@ -46,8 +46,6 @@ Onnistunut tietolähdeyhteys Prometheus -> Grafana:
 
 Uusi luotu dashboard, jossa luodut mittarit CPU:lle, muistille, levytilalle, verkkoliikenteille (saapuva ja lähtevä):
 
-Dashboard:
-
 ![grafana dashboard](images/week03-grafana-dashboard.png)
 
 Käytetyt PromQL-kyselyt:
