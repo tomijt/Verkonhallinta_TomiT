@@ -1,3 +1,5 @@
+# Viikko 2 – SNMP ja verkon perustason valvonta
+
 # 1. Johdanto (Mikä on SNMP)
 
 SNMP eli Simple Network Management Protocol on verkkolaitteiden valvontaan ja hallintaan tarkoitettu protokolla. Sen avulla voidaan kerätä tietoa verkossa olevista laitteista keskitetysti ilman, että jokaiseen laitteeseen tarvitsee kirjautua erikseen. Näin verkon toimintaa on helpompi seurata ja mahdollisia ongelmia havaita.
