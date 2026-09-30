@@ -1,3 +1,5 @@
+# Viikko 1 – Verkon dokumentointi
+
 # 1. Johdanto
 
 Tässä dokumentaatiossa kuvataan Verkonhallinta-harjoitusympäristön verkkotopologiaa ja sen rakennetta. Työssä kartoitetaan ympäristön laitteet, niiden väliset yhteydet sekä käytössä olevat IP-verkot ja osoitteet.
