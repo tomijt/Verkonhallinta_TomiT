@@ -55,7 +55,7 @@ Käytetyt PromQL-kyselyt:
 - CPU = 100 - (avg by(instance)
 (rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)
 
-- Muisti =(node_memory_MemTotal_bytes -
+- Muisti = (node_memory_MemTotal_bytes -
  node_memory_MemAvailable_bytes) / node_memory_MemTotal_bytes * 100
 
 - Levytila = 100 - ( node_filesystem_avail_bytes / node_filesystem_size_bytes * 100 )
