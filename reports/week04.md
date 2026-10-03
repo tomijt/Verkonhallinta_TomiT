@@ -158,7 +158,7 @@ Tulokset:
 
 Suoritin Node Exporter -playbookin web1- ja db1-koneille. Molemmilla kohteilla kuusi tehtävää onnistui ja yksi ohitettiin. Paketin purkaminen ohitettiin, koska ohjelmatiedosto oli jo olemassa. Node Exporter oli valmiiksi käynnissä, joten uusia prosesseja ei tarvinnut käynnistää.
 
-Mittaripalvelun tarkistus onnistui molemmilla koneilla, joten Node Exporter tarjosi mittaustietoja osoitteessa http://localhost:9100/metrics. Ajon yhteenvedossa kummallakin kohteella oli changed=0, unreachable=0 ja failed=0. Suoritus onnistui siis ilman muutoksia tai virheitä.
+Mittaripalvelun tarkistus onnistui molemmilla koneilla, joten Node Exporter tarjosi mittaustietoja osoitteessa 'http://localhost:9100/metrics'. Ajon yhteenvedossa kummallakin kohteella oli changed=0, unreachable=0 ja failed=0. Suoritus onnistui siis ilman muutoksia tai virheitä.
 
 ## 5. Vertailu
 
