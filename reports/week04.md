@@ -179,4 +179,4 @@ Harjoituksen aikana ratkaisin SSH-palveluiden käynnistykseen, tiedostopolkuihin
 Harjoitus auttoi ymmärtämään Infrastructure as Code -periaatetta käytännössä. Kun asennusvaiheet on määritelty playbookiin, niitä voidaan toistaa useille koneille ja hyödyntää myöhemmin uudelleen. Jatkossa voisin käyttää Ansiblea esimerkiksi ohjelmistojen asennuksiin, asetusten hallintaan ja toistuviin ylläpitotehtäviin.
 
 
-Tehtävissä on käytetty tekoälyn työkaluja apuna.
+Tehtävissä on käytetty jonkin verran tekoälyn työkaluja apuna.
