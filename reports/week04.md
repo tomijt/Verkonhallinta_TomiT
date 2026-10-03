@@ -177,3 +177,6 @@ Harjoituksessa opin käyttämään Ansiblea usean koneen keskitettyyn hallintaan
 Harjoituksen aikana ratkaisin SSH-palveluiden käynnistykseen, tiedostopolkuihin ja terminaalin alueasetuksiin liittyviä ongelmia. Opin myös tulkitsemaan Ansiblen tulosteita ja erottamaan onnistuneet tehtävät, tehdyt muutokset ja epäonnistuneet yhteydet toisistaan.
 
 Harjoitus auttoi ymmärtämään Infrastructure as Code -periaatetta käytännössä. Kun asennusvaiheet on määritelty playbookiin, niitä voidaan toistaa useille koneille ja hyödyntää myöhemmin uudelleen. Jatkossa voisin käyttää Ansiblea esimerkiksi ohjelmistojen asennuksiin, asetusten hallintaan ja toistuviin ylläpitotehtäviin.
+
+
+Tehtävissä käytetty tekoälyn apua.
