@@ -1,6 +1,6 @@
 # Viikko 6 – Zabbix ja keskitetty verkonvalvonta
 
-## 1. Johdanto (Mikä Zabbix on?)
+## 1. Johdanto
 
 Zabbix on avoimen lähdekoodin valvontaohjelmisto, jota käytetään verkkojen, palvelimien ja palveluiden toiminnan seuraamiseen. Sen avulla voidaan valvoa esimerkiksi prosessorin kuormitusta, muistinkäyttöä, levytilaa, verkkoliikennettä ja laitteiden saatavuutta.
 
