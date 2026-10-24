@@ -27,7 +27,7 @@ Laitteiden lisäämisen jälkeen tarkistettiin, että kaikkien kolmen hostin ZBX
 
 *Kuva 1. Zabbixiin lisätyt hostit ja niiden toimivat agenttiyhteydet.*
 
-![Zabbixiin lisätyt kolme hostia ja vihreät ZBX-merkinnät](images/hostit.png)
+![Zabbixiin lisätyt kolme hostia ja vihreät ZBX-merkinnät](images/week06-hostit.png)
 
 ## 3. Dashboard
 
