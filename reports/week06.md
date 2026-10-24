@@ -25,7 +25,7 @@ Valvonnassa seurattiin esimerkiksi seuraavia tietoja:
 
 Laitteiden lisäämisen jälkeen tarkistettiin, että kaikkien kolmen hostin ZBX-merkintä oli vihreä ja mittaustiedot päivittyivät Zabbixin Latest data -näkymässä.
 
-*Kuva 1. Zabbixiin lisätyt hostit ja niiden toimivat agenttiyhteydet.*
+Kuva 1. Zabbixiin lisätyt hostit ja niiden toimivat agenttiyhteydet.
 
 ![Zabbixiin lisätyt kolme hostia ja vihreät ZBX-merkinnät](images/week06-hostit.png)
 
@@ -35,7 +35,7 @@ Zabbixiin luotiin Golden Topology Status -niminen dashboard, jonka avulla voidaa
 
 *Kuva 2. Kuvakaappaus luodusta dashboardista.*
 
-![Golden Topology Status -dashboard](images/dashboard.png)
+![Golden Topology Status -dashboard](images/week06-dashboard.png)
 
 ## 4. Mittarit
 
@@ -70,9 +70,9 @@ CPU-triggerin alkuperäinen hälytysraja oli 80 %, mutta testin ajaksi se lasket
 
 *Kuvat 3 ja 4. CPU:n käyttöasteen nousu yli testirajan ja siitä syntynyt hälytys.*
 
-![CPU:n käyttöasteen nousu yli testirajan](images/cpu-kuormitus.png)
+![CPU:n käyttöasteen nousu yli testirajan](images/week06-cpu-kuormitus.png)
 
-![CPU-hälytys Zabbixin Problems-näkymässä](images/cpu-halytys.png)
+![CPU-hälytys Zabbixin Problems-näkymässä](images/week06-cpu-halytys.png)
 
 **Tulos:** Zabbix muodosti CPU-hälytyksen noin 30 sekuntia raja-arvon ylittymisen jälkeen.
 
@@ -88,7 +88,7 @@ Levytilan hälytysraja laskettiin testin ajaksi 1,30 prosenttiin, koska valvotta
 
 *Kuva 5. Levytilan triggerhälytys.*
 
-![Levytilan triggerhälytys](images/levytila-halytys.png)
+![Levytilan triggerhälytys](images/week06-levytila-halytys.png)
 
 **Tulos:** Levytilan käyttö ylitti määritetyn raja-arvon, ja Zabbix muodosti hälytyksen noin 30 sekunnissa.
 
@@ -98,7 +98,7 @@ Häiriötilannetta simuloitiin pysäyttämällä web1-palvelimen Apache-palvelu 
 
 *Kuva 6. Apache-palvelun pysähtymisestä syntynyt hälytys.*
 
-![Apache-palvelun pysähtymisestä syntynyt hälytys](images/apache-halytys.png)
+![Apache-palvelun pysähtymisestä syntynyt hälytys](images/week06-apache-halytys.png)
 
 **Tulos:** Zabbix havaitsi palvelun pysähtymisen noin 30 sekunnissa ja näytti Monitoring → Problems -näkymässä hälytyksen `Apache: Service is down`.
 
