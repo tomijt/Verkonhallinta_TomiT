@@ -33,7 +33,7 @@ Kuva 1. Zabbixiin lisätyt hostit ja niiden toimivat agenttiyhteydet.
 
 Zabbixiin luotiin Golden Topology Status -niminen dashboard, jonka avulla voidaan seurata Containerlab-ympäristön laitteiden toimintaa yhdestä näkymästä.
 
-*Kuva 2. Kuvakaappaus luodusta dashboardista.*
+Kuva 2. Kuvakaappaus luodusta dashboardista.
 
 ![Golden Topology Status -dashboard](images/week06-dashboard.png)
 
@@ -68,7 +68,7 @@ Triggerien toimintaa testattiin laskemalla hälytysrajoja väliaikaisesti. Testi
 
 CPU-triggerin alkuperäinen hälytysraja oli 80 %, mutta testin ajaksi se laskettiin 6 prosenttiin. Web1-palvelimelle aiheutettiin prosessorikuormitusta, jotta hälytysraja ylittyisi.
 
-*Kuvat 3 ja 4. CPU:n käyttöasteen nousu yli testirajan ja siitä syntynyt hälytys.*
+Kuvat 3 ja 4. CPU:n käyttöasteen nousu yli testirajan ja siitä syntynyt hälytys.
 
 ![CPU:n käyttöasteen nousu yli testirajan](images/week06-cpu-kuormitus.png)
 
@@ -86,7 +86,7 @@ dd if=/dev/zero of=/configs/testfile.img bs=1M count=1000
 
 Levytilan hälytysraja laskettiin testin ajaksi 1,30 prosenttiin, koska valvottava levyalue oli suuri.
 
-*Kuva 5. Levytilan triggerhälytys.*
+Kuva 5. Levytilan triggerhälytys.
 
 ![Levytilan triggerhälytys](images/week06-levytila-halytys.png)
 
@@ -96,7 +96,7 @@ Levytilan hälytysraja laskettiin testin ajaksi 1,30 prosenttiin, koska valvotta
 
 Häiriötilannetta simuloitiin pysäyttämällä web1-palvelimen Apache-palvelu komennolla `service apache2 stop`.
 
-*Kuva 6. Apache-palvelun pysähtymisestä syntynyt hälytys.*
+Kuva 6. Apache-palvelun pysähtymisestä syntynyt hälytys.
 
 ![Apache-palvelun pysähtymisestä syntynyt hälytys](images/week06-apache-halytys.png)
 
