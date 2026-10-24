@@ -100,7 +100,7 @@ Kuva 6. Apache-palvelun pysähtymisestä syntynyt hälytys.
 
 ![Apache-palvelun pysähtymisestä syntynyt hälytys](images/week06-apache-halytys.png)
 
-**Tulos:** Zabbix havaitsi palvelun pysähtymisen noin 30 sekunnissa ja näytti Monitoring → Problems -näkymässä hälytyksen `Apache: Service is down`.
+**Tulos:** Zabbix havaitsi palvelun pysähtymisen noin 30 sekunnissa ja näytti Monitoring → Problems -näkymässä hälytyksen Apache: Service is down.
 
 ## 7. Vertailu
 
